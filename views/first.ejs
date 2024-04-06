@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+<h1>HELLO</h1>
+<p><%= startingcontent %></p>
+<% posts.forEach(function(post){ %>
+    <h2><%= post.composetitle %> </h2>
+    <p><%= post.composecontent.substring(0,100) + "..." %>
+    <a href="/posts/<%= post.composetitle %> ">Read More...</a>
+    </p>
+    <% }) %>
+    <form action="/first" method="post">
+        <div class="magic my-3">
+            <button type="submit" name="button" style="background-color: blue;color:aliceblue">Compose</button>
+        </div>
+    </form><br><br>
+    
+   
+
+<%- include("partials/footer") -%>
